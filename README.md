@@ -1,2 +1,3 @@
 # rock-paper-scisor-for-top
-Rock-Paper-Scisor-For -The-Odin-Project
+
+A simple Rock Paper Scisor javascript web game for The Odin Project.
