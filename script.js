@@ -56,7 +56,6 @@ function game(){
     let playerScore = 0;
     let computerScore = 0;
     for (let i = 1; i <=5; i++){
-        let playerSelection = prompt("Rock, paper or scisor? Make five choices.");
         let result = playRound(playerSelection, getComputerChoice());
         result != undefined ? console.log(result) : window.console.error('You choose an invalid option, please only scisor, rock or paper. F5 to try again.');
         
@@ -67,5 +66,6 @@ function game(){
        console.log(`\nFinal Score:\nPlayer: ${playerScore}, Computer: ${computerScore}\n\nPress F5 to play again.`);
 }
 
+let playerSelection = prompt("Rock, paper or scisor? Make five choices.");
 
 game();
