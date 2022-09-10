@@ -1,3 +1,35 @@
+/*RULES EXPLANATION*/
+
+const ruleButton = document.querySelector('.rules');
+ruleButton.addEventListener('click', rulesAction, {once:true});
+
+function rulesAction() {
+    let ruleExplanationParent = document.querySelector('.principalTitle');
+        let ruleExplanation = document.createElement('div');
+        ruleExplanation.classList.add('ruleExplanation');
+
+            let rulesTitle = document.createElement('h2');
+            rulesTitle.textContent = "RULES";
+            ruleExplanation.appendChild(rulesTitle);
+
+            let rulesParagraph = document.createElement('p');
+            rulesParagraph.textContent = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.";
+            ruleExplanation.appendChild(rulesParagraph);
+            
+        ruleExplanationParent.appendChild(ruleExplanation);
+    }
+
+
+
+
+
+
+
+
+
+
+
+/*CODIGO DO JOGO EM SI*/
 let computerChoice = '';
 
 //generates a random number between a min and max range
@@ -66,6 +98,6 @@ function game(){
        console.log(`\nFinal Score:\nPlayer: ${playerScore}, Computer: ${computerScore}\n\nPress F5 to play again.`);
 }
 
-let playerSelection = prompt("Rock, paper or scisor? Make five choices.");
+//let playerSelection = prompt("Rock, paper or scisor? Make five choices.");
 
-game();
+//game();
