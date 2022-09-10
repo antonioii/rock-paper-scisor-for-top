@@ -61,4 +61,18 @@ button {
     flex: 0 1 auto;
     margin: 8px;
 }
-  
+
+.choicesDiv, {
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rules,
+.rock,
+.sciz,
+.paper {
+    border: 2px solid red;
+    width: 100px;
+}
