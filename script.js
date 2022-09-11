@@ -24,19 +24,17 @@ function makeAChoice(){
 }
 
 function makeComputerChoice() {
-    document.querySelector('h1').textContent = "Computer is choosing";
-    //change the name of "Make your choice" to "NOW IT'S COMPUTER TURN"
-
-    const bodyContainer = document.querySelector('#bodyContainer');
-    const buttonsDiv = document.querySelector('.buttons');
-    bodyContainer.removeChild(buttonsDiv);
-    //take off the buttons field
+    let bodyDiv = document.querySelector('body');
+    let bodyContainer = document.querySelector('#bodyContainer');
+    bodyDiv.removeChild(bodyContainer);
+    //take off the bodyContainer
 
     computerChoice = getComputerChoice();
     //store the value returned by getComputerChoice
 
-    console.log(playRound(userChoice, computerChoice));
-    //start a round and prints the result in console
+    showResult(playRound(userChoice, computerChoice));
+    //start the result round
+
 }
 
 function getComputerChoice(){
@@ -53,26 +51,27 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection) {    
-    switch(true) {
-       case playerSelection == computerSelection : return "It's a draw.";
-       break;   
+    switch(true) {    
+       case playerSelection == computerSelection :
+        return '0'; //"It's a draw.";
+        break;   
        case playerSelection == 'rock' && computerSelection == 'paper' :
-           return `You lose, ${computerSelection} beats ${playerSelection}`;
+           return '1';//`You lose, ${computerSelection} beats ${playerSelection}`;
            break;
        case playerSelection == 'rock' && computerSelection == 'scissor' :
-           return `You win, ${computerSelection} lose to ${playerSelection}`;
+           return '2';//`You win, ${computerSelection} lose to ${playerSelection}`;
            break;
        case playerSelection == 'paper' && computerSelection == 'scissor' :
-           return `You lose, ${computerSelection} beats ${playerSelection}`;
+           return '3';//`You lose, ${computerSelection} beats ${playerSelection}`;
            break;
        case playerSelection == 'paper' && computerSelection == 'rock' :
-           return `You win, ${computerSelection} lose to ${playerSelection}`;
+           return '4';//`You win, ${computerSelection} lose to ${playerSelection}`;
            break;
        case playerSelection == 'scissor' && computerSelection == 'paper' :
-           return `You win, ${computerSelection} lose to ${playerSelection}`;
+           return '5';//`You win, ${computerSelection} lose to ${playerSelection}`;
            break;
        case playerSelection == 'scissor' && computerSelection == 'rock' :
-           return `You lose, ${computerSelection} beats to ${playerSelection}`;
+           return '6';//`You lose, ${computerSelection} beats to ${playerSelection}`;
            break;
        default : return window.console.error('You choose an invalid option, please only scissor, rock or paper. F5 to try again.');
     }
@@ -82,7 +81,8 @@ function playRound(playerSelection, computerSelection) {
 //se qualquer variavel for true,
 //chama a função que vai colocar na tela 'pc choice' por alguns segundos e chama a função makeComputerChoice
 //função computer choice vai competir os valores user com pc
-//output na tela com resultado
+//output na tela com resultado "draw, win round, lose round"
+//permite 5 jogos e no final output com game over win e lose the game e play again
 
 
 
