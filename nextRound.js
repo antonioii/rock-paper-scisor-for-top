@@ -1,3 +1,8 @@
+function reloadPage(){
+    document.location.reload(true);
+}
+//reload page without cashe
+
 function nextRound(){
     let bodyResultContainer = document.querySelector('#bodyResultContainer');
     let inGameButtons = document.querySelector('.inGameButtons');
@@ -41,4 +46,5 @@ function nextRound(){
     //reset all the buttons state of the make your choice screen
     
     startChoices();
+    //back to the playButton.js where we start the rounds
 }

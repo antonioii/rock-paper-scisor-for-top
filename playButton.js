@@ -35,5 +35,12 @@ function startChoices(){
         //creates the scissors button
     buttonsDiv.insertBefore(choicesDiv, rulesButton);
 
+    let quitButton = document.createElement('button');
+    quitButton.classList.add('quitButton');
+    quitButton.textContent = "QUIT";
+    quitButton.setAttribute('onclick', 'reloadPage()');
+    buttonsDiv.appendChild(quitButton);
+    //A button to reload the page:<button class="quitButton" onclick="reloadPage()">QUIT</button>
+
     makeAChoice();
 }

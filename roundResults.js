@@ -69,7 +69,7 @@ function setResultPage(){
             </div>    
 
             <div class="inGameButtons">
-                <button>QUIT</button>
+                <button class="quitButton" onclick="reloadPage()">QUIT</button>
                 <button class="nextButton" onclick="nextRound()">Next Round</button>
             </div>
         `;
