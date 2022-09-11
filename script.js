@@ -14,6 +14,10 @@ function makeAChoice(){
     //change the value inside the variables when clicked
 }
 
+//se qualquer variavel for true,
+//chama a função que vai colocar na tela 'pc choice' por alguns segundos e chama a função makeComputerChoice
+//função computer choice vai competir os valores user com pc
+//output na tela com resultado
 
 
 
