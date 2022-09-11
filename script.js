@@ -15,11 +15,11 @@ let userChoice = '';
 
 function makeAChoice(){
     const rockButton = document.querySelector('.rock');
-    rockButton.addEventListener('click',() => {userRock = true; userChoice = 'rock'; makeComputerChoice();} , {once:true});
+    rockButton.addEventListener('click',() => {userRock = true; userChoice = 'ROCK'; makeComputerChoice();} , {once:true});
     const paperButton = document.querySelector('.paper');
-    paperButton.addEventListener('click',() => {userPaper = true; userChoice = 'paper'; makeComputerChoice();} , {once:true});
+    paperButton.addEventListener('click',() => {userPaper = true; userChoice = 'PAPER'; makeComputerChoice();} , {once:true});
     const scizButton = document.querySelector('.sciz');
-    scizButton.addEventListener('click',() => {userScissor = true; userChoice = 'scissor'; makeComputerChoice();} , {once:true});
+    scizButton.addEventListener('click',() => {userScissor = true; userChoice = 'SCISSOR'; makeComputerChoice();} , {once:true});
     //change the value inside the variables when clicked and activate the cpu turn
 }
 
@@ -41,11 +41,11 @@ function getComputerChoice(){
     let choiceNumber = randomIntFromInterval(1,3);
     //pick a random number between 1-3
     switch(true){
-        case choiceNumber == 1 : return "rock";
+        case choiceNumber == 1 : return "ROCK";
         break;
-        case choiceNumber == 2 : return "paper";
+        case choiceNumber == 2 : return "PAPER";
         break;
-        default : return "scissor"
+        default : return "SCISSOR"
     }
     //pick the choiceNumber and return the string to makeComputerChoice()
 }
@@ -55,22 +55,22 @@ function playRound(playerSelection, computerSelection) {
        case playerSelection == computerSelection :
         return '0'; //"It's a draw.";
         break;   
-       case playerSelection == 'rock' && computerSelection == 'paper' :
+       case playerSelection == 'ROCK' && computerSelection == 'PAPER' :
            return '1';//`You lose, ${computerSelection} beats ${playerSelection}`;
            break;
-       case playerSelection == 'rock' && computerSelection == 'scissor' :
+       case playerSelection == 'ROCK' && computerSelection == 'SCISSOR' :
            return '2';//`You win, ${computerSelection} lose to ${playerSelection}`;
            break;
-       case playerSelection == 'paper' && computerSelection == 'scissor' :
+       case playerSelection == 'PAPER' && computerSelection == 'SCISSOR' :
            return '3';//`You lose, ${computerSelection} beats ${playerSelection}`;
            break;
-       case playerSelection == 'paper' && computerSelection == 'rock' :
+       case playerSelection == 'PAPER' && computerSelection == 'ROCK' :
            return '4';//`You win, ${computerSelection} lose to ${playerSelection}`;
            break;
-       case playerSelection == 'scissor' && computerSelection == 'paper' :
+       case playerSelection == 'SCISSOR' && computerSelection == 'PAPER' :
            return '5';//`You win, ${computerSelection} lose to ${playerSelection}`;
            break;
-       case playerSelection == 'scissor' && computerSelection == 'rock' :
+       case playerSelection == 'SCISSOR' && computerSelection == 'ROCK' :
            return '6';//`You lose, ${computerSelection} beats to ${playerSelection}`;
            break;
        default : return window.console.error('You choose an invalid option, please only scissor, rock or paper. F5 to try again.');
