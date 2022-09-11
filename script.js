@@ -1,4 +1,23 @@
 /*CODIGO DO JOGO EM SI*/
+let userRock = false;
+let userPaper = false;
+let userScissor = false;
+//variables representing the user choice
+
+function makeAChoice(){
+    const rockButton = document.querySelector('.rock');
+    rockButton.addEventListener('click',() => {userRock = true;} , {once:true});
+    const paperButton = document.querySelector('.paper');
+    paperButton.addEventListener('click',() => {userPaper = true;} , {once:true});
+    const scizButton = document.querySelector('.sciz');
+    scizButton.addEventListener('click',() => {userScissor = true;} , {once:true});
+    //change the value inside the variables when clicked
+}
+
+
+
+
+/*Old code*/ /*
 let computerChoice = '';
 
 //generates a random number between a min and max range
@@ -70,3 +89,4 @@ function game(){
 //let playerSelection = prompt("Rock, paper or scisor? Make five choices.");
 
 //game();
+*/

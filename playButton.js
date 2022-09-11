@@ -34,4 +34,6 @@ function startChoices(){
         choicesDiv.appendChild(scizButton);
         //creates the scissors button
     buttonsDiv.insertBefore(choicesDiv, rulesButton);
+
+    makeAChoice();
 }
