@@ -78,7 +78,6 @@ function setResultPage(){
 
 function showResult(result){
     setResultPage();
-    console.log(result);
     switch(true){
         case result == '0' :
             return setCase(0);

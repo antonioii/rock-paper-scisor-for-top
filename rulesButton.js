@@ -7,7 +7,6 @@ ruleButton.addEventListener('click', activeRulesExplanation);
 
 //function to check if a button is already clicked in order to remove or make the explanatory window
 function activeRulesExplanation(){
-    console.log(alreadyClicked);
     if(alreadyClicked) {
         alreadyClicked = false;
         let ruleExplanationParent = document.querySelector('.principalTitle');
