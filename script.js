@@ -6,12 +6,22 @@ let userScissor = false;
 
 function makeAChoice(){
     const rockButton = document.querySelector('.rock');
-    rockButton.addEventListener('click',() => {userRock = true;} , {once:true});
+    rockButton.addEventListener('click',() => {userRock = true; makeComputerChoice();} , {once:true});
     const paperButton = document.querySelector('.paper');
-    paperButton.addEventListener('click',() => {userPaper = true;} , {once:true});
+    paperButton.addEventListener('click',() => {userPaper = true; makeComputerChoice();} , {once:true});
     const scizButton = document.querySelector('.sciz');
-    scizButton.addEventListener('click',() => {userScissor = true;} , {once:true});
-    //change the value inside the variables when clicked
+    scizButton.addEventListener('click',() => {userScissor = true; makeComputerChoice();} , {once:true});
+    //change the value inside the variables when clicked and activate the cpu turn
+}
+
+function makeComputerChoice() {
+    document.querySelector('h1').textContent = "Computer is choosing";
+    //change the name of "Make your choice" to "NOW IT'S COMPUTER TURN"
+
+    const bodyContainer = document.querySelector('#bodyContainer');
+    const buttonsDiv = document.querySelector('.buttons');
+    bodyContainer.removeChild(buttonsDiv);
+    //take off the buttons field
 }
 
 //se qualquer variavel for true,
