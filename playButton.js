@@ -1,4 +1,4 @@
-const buttonsDiv = document.querySelector('.buttons');
+let buttonsDiv = document.querySelector('.buttons');
 let playButton = document.querySelector('.play');
 playButton.addEventListener('click', startChoices, {once:true});
 

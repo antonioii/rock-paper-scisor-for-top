@@ -119,6 +119,10 @@ function setCase(resultCase){
     leftRoundTitle.textContent = numberOfRounds;
     //number of rounds is updated and sent to the lateral round titles
 
+    let resultDisplayRound = document.querySelector('.resultDisplayRound');
+    resultDisplayRound.textContent = numberOfRounds;
+    //also, number of rounds is sent to the display round in screen center
+
     if(resultCase == 0) { //draw case
         let resultTitleCaption = document.querySelector('.resultTitleCaption');
         resultTitleCaption.textContent = "It's a Draw!";
@@ -151,4 +155,5 @@ function setCase(resultCase){
 //setted the resultTitleCaptions accordingly the resultcases
 //points given
 //setted the score values accordingly the points
+
 

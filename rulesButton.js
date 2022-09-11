@@ -1,7 +1,7 @@
 /*Antonio Sérgio - 10-09-2022*/
 /*Rules Explanation Button*/
 
-const ruleButton = document.querySelector('.rules');
+let ruleButton = document.querySelector('.rules');
 let alreadyClicked = false;
 ruleButton.addEventListener('click', activeRulesExplanation);
 
