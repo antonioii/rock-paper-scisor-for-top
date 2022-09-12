@@ -15,15 +15,33 @@ let userChoice = '';
 
 function makeAChoice(){
     const rockButton = document.querySelector('.rock');
-    rockButton.addEventListener('click',() => {userRock = true; userChoice = 'ROCK'; makeComputerChoice();} , {once:true});
+    rockButton.addEventListener('click',() => {
+        userRock = true;
+        userChoice = 'ROCK';
+        makeComputerChoice();},
+        {once:true});
+
     const paperButton = document.querySelector('.paper');
-    paperButton.addEventListener('click',() => {userPaper = true; userChoice = 'PAPER'; makeComputerChoice();} , {once:true});
+    paperButton.addEventListener('click',() => {
+        userPaper = true;
+        userChoice = 'PAPER';
+        makeComputerChoice();},
+        {once:true});
+
     const scizButton = document.querySelector('.sciz');
-    scizButton.addEventListener('click',() => {userScissor = true; userChoice = 'SCISSOR'; makeComputerChoice();} , {once:true});
+    scizButton.addEventListener('click',() => {
+        userScissor = true;
+        userChoice = 'SCISSOR';
+        makeComputerChoice();},
+        {once:true});
     //change the value inside the variables when clicked and activate the cpu turn
 }
 
 function makeComputerChoice() {
+    if(numberOfRounds == limitOfRounds) {
+        gameOver();
+    } else {
+
     let bodyDiv = document.querySelector('body');
     let bodyContainer = document.querySelector('#bodyContainer');
     bodyDiv.removeChild(bodyContainer);
@@ -34,7 +52,7 @@ function makeComputerChoice() {
 
     showResult(playRound(userChoice, computerChoice));
     //start the result round
-
+    }
 }
 
 function getComputerChoice(){

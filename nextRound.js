@@ -35,6 +35,7 @@ function nextRound(){
         <script src="script.js"></script>
         <script src="roundResults.js"></script>
         <script src="nextRound.js"></script>
+        <script src="gameOver.js"></script>
     `;
     //make the DOM as similar as the first one
 
@@ -47,4 +48,5 @@ function nextRound(){
     
     startChoices();
     //back to the playButton.js where we start the rounds
+
 }

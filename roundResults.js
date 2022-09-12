@@ -1,3 +1,4 @@
+const limitOfRounds = 2;
 let numberOfRounds = 0;
 let userPoints = 0;
 let computerPoints = 0;
@@ -78,6 +79,14 @@ function setResultPage(){
 
 function showResult(result){
     setResultPage();
+    //create the round result page
+
+    if(numberOfRounds == limitOfRounds -1) {
+    let nextButton = document.querySelector('.nextButton');
+    nextButton.textContent = 'Final Round';
+    }
+    //if its pre-final, write final round in the 'next button'
+
     switch(true){
         case result == '0' :
             return setCase(0);
