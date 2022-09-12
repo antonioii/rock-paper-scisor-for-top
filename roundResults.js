@@ -1,4 +1,4 @@
-const limitOfRounds = 2;
+const limitOfRounds = 2; //to play 5 rounds we should put 4, the last one redirects to the final match page
 let numberOfRounds = 0;
 let userPoints = 0;
 let computerPoints = 0;
