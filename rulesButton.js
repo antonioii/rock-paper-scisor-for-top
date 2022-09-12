@@ -30,7 +30,7 @@ function rulesAction() {
             ruleExplanation.appendChild(rulesTitle);
 
             let rulesParagraph = document.createElement('p');
-            rulesParagraph.textContent = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.";
+            rulesParagraph.textContent = "Jogue Pedra (rock), papel (paper) ou tesoura (scissor). Serão três rodadas (rounds). Ao final das três, será mostrado se você ganhou do computador ou não... Aperte 'PLAY' para jogar, 'RULES' para fechar/abrir as regras, ou 'QUIT' no meio do jogo para reiniciar.";
             ruleExplanation.appendChild(rulesParagraph);
             
         ruleExplanationParent.appendChild(ruleExplanation);
