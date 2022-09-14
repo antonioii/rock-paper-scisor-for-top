@@ -3,13 +3,20 @@ function reloadPage(){
 }
 //reload page without cashe
 
-function nextRound(){
+function deleteDomAndCallNextRound() {
     let bodyResultContainer = document.querySelector('#bodyResultContainer');
     let inGameButtons = document.querySelector('.inGameButtons');
     let body = document.querySelector('body');
     body.removeChild(bodyResultContainer);
     body.removeChild(inGameButtons);
     //delete all the DOM
+
+    nextRound(body);
+    //call next round
+}
+
+function nextRound(body){
+    
 
     userRock = false;
     userPaper = false;
