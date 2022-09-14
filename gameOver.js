@@ -61,9 +61,29 @@ function showFinal(caseFinal, userChoice, computerChoice){
     let matchesExposition = document.querySelector('.matchesExplanation');
     matchesExposition.textContent = `Computer: ${computerPoints} | You: ${userPoints} points`;
 
-    //create the final match DOM displaying the points
+    //create the final match DOM displaying the points    
 
-    
+
+    let replayButtom = document.querySelector('.playAgain');
+    replayButtom.addEventListener('click', deleteDomAndReplay);
     //finalButtons functionalities
-    
+}
+
+function deleteDomAndReplay(){
+    let body = document.querySelector('body');
+    let bodyChild = document.querySelector('#bodyContainer ');
+    body.removeChild(bodyChild)
+    //delete DOM
+
+    userRock = false;
+    userPaper = false;
+    userScissor = false;
+    computerChoice = '';
+    userChoice = '';
+    numberOfRounds = 0;
+    userPoints = 0;
+    computerPoints = 0;
+    //reset all the variables of the program
+    nextRound(body);
+    //call the nextRound
 }
