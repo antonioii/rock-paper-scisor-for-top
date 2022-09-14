@@ -95,34 +95,3 @@ function playRound(playerSelection, computerSelection) {
     }
     //analise and compare de cases
    }
-
-//se qualquer variavel for true,
-//chama a função que vai colocar na tela 'pc choice' por alguns segundos e chama a função makeComputerChoice
-//função computer choice vai competir os valores user com pc
-//output na tela com resultado "draw, win round, lose round"
-//permite 5 jogos e no final output com game over win e lose the game e play again
-
-
-
-/*Old code*/ /*
-
-
-//function to play 5 rounds
-function game(){
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 1; i <=5; i++){
-        let result = playRound(playerSelection, getComputerChoice());
-        result != undefined ? console.log(result) : window.console.error('You choose an invalid option, please only scissor, rock or paper. F5 to try again.');
-        
-        if (result != undefined && result.charAt(4) == 'w') {playerScore++}
-        else if (result != undefined && result.charAt(4) == 'l') {computerScore++}
-       }
-
-       console.log(`\nFinal Score:\nPlayer: ${playerScore}, Computer: ${computerScore}\n\nPress F5 to play again.`);
-}
-
-//let playerSelection = prompt("Rock, paper or scissor? Make five choices.");
-
-//game();
-*/
