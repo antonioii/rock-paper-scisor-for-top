@@ -66,7 +66,9 @@ function showFinal(caseFinal, userChoice, computerChoice){
 
     let replayButtom = document.querySelector('.playAgain');
     replayButtom.addEventListener('click', deleteDomAndReplay);
-    //finalButtons functionalities
+    //play again button functionality
+
+    //MISSED YET: the rules functionality!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
 
 function deleteDomAndReplay(){
