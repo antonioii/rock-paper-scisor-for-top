@@ -116,9 +116,9 @@ function showResult(result){
 function setCase(resultCase){
     let computerChoiceFig = document.querySelector('.computerChoiceFig');
     let userChoiceFig = document.querySelector('.userChoiceFig');
-    computerChoiceFig.textContent = computerChoice;
-    userChoiceFig.textContent = userChoice;
-    //set the choice figs to the choices variable values inside the script.js
+    computerChoiceFig.textContent = choiceToEmoji(computerChoice);
+    userChoiceFig.textContent = choiceToEmoji(userChoice);
+    //set the choice figs to the choices variable values inside the script.js after the choiceToEmoji been executed
 
     numberOfRounds += 1;
     let rightRoundTitle = document.querySelector('.h2Right');

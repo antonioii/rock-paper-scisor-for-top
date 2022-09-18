@@ -13,6 +13,19 @@ let computerChoice = '';
 let userChoice = '';
 //variables representing the user choice and the computer choice
 
+function choiceToEmoji(choice){
+    switch(true){
+        case choice == 'ROCK' : return "✊";
+        break;
+
+        case choice == 'SCISSOR' : return "✌️";
+        break;
+
+        default : return "✋";
+    }
+}
+//function to change the choices to emojis
+
 function makeAChoice(){
     const rockButton = document.querySelector('.rock');
     rockButton.addEventListener('click',() => {

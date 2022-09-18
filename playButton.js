@@ -18,19 +18,19 @@ function startChoices(){
 
         let rockButton = document.createElement('button');
         rockButton.classList.add('rock');
-        rockButton.textContent = "ROCK";
+        rockButton.textContent = "✊";
         choicesDiv.appendChild(rockButton);
         //creates the rock button
 
         let paperButton = document.createElement('button');
         paperButton.classList.add('paper');
-        paperButton.textContent = "PAPER";
+        paperButton.textContent = "✋";
         choicesDiv.appendChild(paperButton);
         //creates the paper button
 
         let scizButton = document.createElement('button');
         scizButton.classList.add('sciz');
-        scizButton.textContent = "SCISSORS";
+        scizButton.textContent = "✌️";
         choicesDiv.appendChild(scizButton);
         //creates the scissors button
     buttonsDiv.insertBefore(choicesDiv, rulesButton);
