@@ -126,7 +126,9 @@ button {
 .currentRound, .lateralRoundTitleLeft, .lateralRoundTitleRight {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
+
 
 .lateralRoundTitleLeft, .h2Left {
     margin-right: auto;
@@ -145,6 +147,8 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
 }
 
 .computerArea, .userArea, .computerScore, .userScore {
@@ -155,8 +159,20 @@ button {
     flex: 1 1 0;
 }
 
+.userArea {
+    margin-top: 50px;
+}
+
+.computerArea {
+    margin-bottom: 10px;
+}
+
 .resultDisplay {
     text-align: center;
+}
+
+.resultTitle {
+    padding: 10px;
 }
 
 /*

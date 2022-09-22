@@ -39,7 +39,6 @@ function showFinal(caseFinal, userChoice, computerChoice){
         <div>
             <h2 class="finalResult">5</h2>
             <h3 class="matchesExplanation"></h3>
-            <p>Buttons below are not working yet, press F5 to play again</p>
         </div>
 
         <div class="finalbuttons">
