@@ -40,6 +40,7 @@ function setResultPage(){
                         <div class="roundsDisplay">
                                 <h2>Round:</h2>
                                 <h2 class="resultDisplayRound"></h2>
+                                <h2 class="limitOfRounds"></h2>
                         </div>
                     </div>
 
@@ -129,11 +130,15 @@ function setCase(resultCase){
 
     let resultDisplayRound = document.querySelector('.resultDisplayRound');
     resultDisplayRound.textContent = numberOfRounds;
-    //also, number of rounds is sent to the display round in screen center
+    //also, number of rounds is sent to the display round in screen center...
+
+    let limitOfRoundsDisplay = document.querySelector('.limitOfRounds');
+    limitOfRoundsDisplay.textContent = '/' + (limitOfRounds+1);
+    //... and also the limit of rounds
 
     if(resultCase == 0) { //draw case
         let resultTitleCaption = document.querySelector('.resultTitleCaption');
-        resultTitleCaption.textContent = "It's a Draw!";
+        resultTitleCaption.textContent = "It's a Draw! 😲";
         let computerScoreValue = document.querySelector('.computerScoreValue');
         computerScoreValue.textContent = computerPoints;
         let userScoreValue = document.querySelector('.userScoreValue');
@@ -141,7 +146,7 @@ function setCase(resultCase){
     
     } else if(resultCase == 1 || resultCase == 3 || resultCase == 6) { //lost case
         let resultTitleCaption = document.querySelector('.resultTitleCaption');
-        resultTitleCaption.textContent = "You lost this round!";
+        resultTitleCaption.textContent = "You lost this round! 😨";
         computerPoints += 1;
         let computerScoreValue = document.querySelector('.computerScoreValue');
         computerScoreValue.textContent = computerPoints;
@@ -150,7 +155,7 @@ function setCase(resultCase){
     
     } else if(resultCase == 2 || resultCase == 4 || resultCase == 5) { //win case
         let resultTitleCaption = document.querySelector('.resultTitleCaption');
-        resultTitleCaption.textContent = "You win this round!";
+        resultTitleCaption.textContent = "You win this round! 🤗";
         userPoints += 1;
         let computerScoreValue = document.querySelector('.computerScoreValue');
         computerScoreValue.textContent = computerPoints;
