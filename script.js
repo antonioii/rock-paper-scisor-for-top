@@ -1,70 +1,110 @@
-let computerChoice = '';
-
-//generates a random number between a min and max range
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
+//Random numbers
 
-//get the computer value of rock, paper or scisor
-function getComputerChoice(){
-    //pick a random number between 1-3
-    let choiceNumber = randomIntFromInterval(1,3);
-    //pick the choiceNumber and return the string
+/*CODIGO DO JOGO EM SI:*/
+
+let userRock = false;
+let userPaper = false;
+let userScissor = false;
+//variables representing the buttons clicked
+let computerChoice = '';
+let userChoice = '';
+//variables representing the user choice and the computer choice
+
+function choiceToEmoji(choice){
     switch(true){
-        case choiceNumber == 1 : return "rock";
+        case choice == 'ROCK' : return "✊";
         break;
-        case choiceNumber == 2 : return "paper";
+
+        case choice == 'SCISSOR' : return "✌️";
         break;
-        default : return "scisor"
+
+        default : return "✋";
+    }
+}
+//function to change the choices to emojis
+
+function makeAChoice(){
+    const rockButton = document.querySelector('.rock');
+    rockButton.addEventListener('click',() => {
+        userRock = true;
+        userChoice = 'ROCK';
+        makeComputerChoice();},
+        {once:true});
+
+    const paperButton = document.querySelector('.paper');
+    paperButton.addEventListener('click',() => {
+        userPaper = true;
+        userChoice = 'PAPER';
+        makeComputerChoice();},
+        {once:true});
+
+    const scizButton = document.querySelector('.sciz');
+    scizButton.addEventListener('click',() => {
+        userScissor = true;
+        userChoice = 'SCISSOR';
+        makeComputerChoice();},
+        {once:true});
+    //change the value inside the variables when clicked and activate the cpu turn
+}
+
+function makeComputerChoice() {
+    if(numberOfRounds == limitOfRounds) {
+        gameOver();
+    } else {
+
+    let bodyDiv = document.querySelector('body');
+    let bodyContainer = document.querySelector('#bodyContainer');
+    bodyDiv.removeChild(bodyContainer);
+    //take off the bodyContainer
+
+    computerChoice = getComputerChoice();
+    //store the value returned by getComputerChoice
+
+    showResult(playRound(userChoice, computerChoice));
+    //start the result round
     }
 }
 
-//function to play a single round
-function playRound(playerSelection, computerSelection) {
- //put the player input to lowercase just as the computer choice
- let playerSelectionCase = playerSelection.toLowerCase();   
- 
- //analise and compare de cases
- switch(true) {
-    case playerSelectionCase == computerSelection : return "It's a draw.";
-    break;
-
-    case playerSelectionCase == 'rock' && computerSelection == 'paper' :
-        return `You lose, ${computerSelection} beats ${playerSelection}`;
+function getComputerChoice(){
+    let choiceNumber = randomIntFromInterval(1,3);
+    //pick a random number between 1-3
+    switch(true){
+        case choiceNumber == 1 : return "ROCK";
         break;
-    case playerSelectionCase == 'rock' && computerSelection == 'scisor' :
-        return `You win, ${computerSelection} lose to ${playerSelection}`;
+        case choiceNumber == 2 : return "PAPER";
         break;
-    case playerSelectionCase == 'paper' && computerSelection == 'scisor' :
-        return `You lose, ${computerSelection} beats ${playerSelection}`;
-        break;
-    case playerSelectionCase == 'paper' && computerSelection == 'rock' :
-        return `You win, ${computerSelection} lose to ${playerSelection}`;
-        break;
-    case playerSelectionCase == 'scisor' && computerSelection == 'paper' :
-        return `You win, ${computerSelection} lose to ${playerSelection}`;
-        break;
-    case playerSelectionCase == 'scisor' && computerSelection == 'rock' :
-        return `You lose, ${computerSelection} beats to ${playerSelection}`;
-        break;
-    default : return window.console.error('You choose an invalid option, please only scisor, rock or paper. F5 to try again.');
- }
+        default : return "SCISSOR"
+    }
+    //pick the choiceNumber and return the string to makeComputerChoice()
 }
 
-//function to play 5 rounds
-function game(){
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 1; i <=5; i++){
-        let result = playRound(playerSelection, getComputerChoice());
-        result != undefined ? console.log(result) : window.console.error('You choose an invalid option, please only scisor, rock or paper. F5 to try again.');
-        
-        if (result != undefined && result.charAt(4) == 'w') {playerScore++}
-        else if (result != undefined && result.charAt(4) == 'l') {computerScore++}
-       }
-
-       console.log(`\nFinal Score:\nPlayer: ${playerScore}, Computer: ${computerScore}\n\nPress F5 to play again.`);
-}
-
-const playerSelection = prompt("Rock, paper or scisor? Make your choice.");
-game();
+function playRound(playerSelection, computerSelection) {    
+    switch(true) {    
+       case playerSelection == computerSelection :
+        return '0'; //"It's a draw.";
+        break;   
+       case playerSelection == 'ROCK' && computerSelection == 'PAPER' :
+           return '1';//`You lose, ${computerSelection} beats ${playerSelection}`;
+           break;
+       case playerSelection == 'ROCK' && computerSelection == 'SCISSOR' :
+           return '2';//`You win, ${computerSelection} lose to ${playerSelection}`;
+           break;
+       case playerSelection == 'PAPER' && computerSelection == 'SCISSOR' :
+           return '3';//`You lose, ${computerSelection} beats ${playerSelection}`;
+           break;
+       case playerSelection == 'PAPER' && computerSelection == 'ROCK' :
+           return '4';//`You win, ${computerSelection} lose to ${playerSelection}`;
+           break;
+       case playerSelection == 'SCISSOR' && computerSelection == 'PAPER' :
+           return '5';//`You win, ${computerSelection} lose to ${playerSelection}`;
+           break;
+       case playerSelection == 'SCISSOR' && computerSelection == 'ROCK' :
+           return '6';//`You lose, ${computerSelection} beats to ${playerSelection}`;
+           break;
+       default : return window.console.error('You choose an invalid option, please only scissor, rock or paper. F5 to try again.');
+    }
+    //analise and compare de cases
+   }

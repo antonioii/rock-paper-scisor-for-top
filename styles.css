@@ -1,0 +1,241 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+.userChoiceFig,
+.computerChoiceFig,
+.h2Right,
+.h2Left,
+.resultTitleCaptionEmoji,
+.resultDisplayRound,
+.limitOfRounds {
+    font-family: 'Noto Color Emoji', sans-serif;
+}
+
+.resultTitleCaptionEmoji {
+    font-size: xx-large;
+}
+
+.rockPaperScissorTitle, .principalTitle>h1{
+    font-family: 'Bungee Spice', cursive;
+    font-size: 42px;
+    text-shadow: 3px 3px black;
+}
+
+.currentRound {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.resultTitleCaption {
+    font-family: 'Comic Neue', cursive;
+}
+
+.ruleExplanation {
+    font-family: 'Kanit', sans-serif;
+    font-size: large;
+}
+
+button {
+    /*an alternative font-family: 'Josefin Sans', sans-serif;*/
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Noto Color Emoji', sans-serif;
+}
+
+/*universal box-sizing reset*/
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/*basic body config*/
+body {    
+    /*the default body has margin and a small viewport compared to the html size, so we do:*/
+    margin: 0px;
+    height: 100vh;
+    /**/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*body backgroun*/
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/*body container*/
+#bodyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*title area*/
+.principalTitle {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h1 {
+   /* border: 2px solid red;*/
+    flex: 0 1 0;
+}
+
+.ruleExplanation {
+   /*  border: 2px solid green; */
+    width: 50%;
+    flex 0 1 0;
+}
+
+/*buttons area*/
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    flex: 0 1 auto;
+    margin: 8px;
+}
+
+.choicesDiv, {
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rules {
+   /* border: 2px solid red;*/
+    width: 100px;
+}
+
+.rock,
+.sciz,
+.paper {
+    width: 100px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 4rem;
+    transition: 100ms; /*time to transformation hover*/
+}
+
+.rock:hover,
+.sciz:hover,
+.paper:hover {
+    transform: scale(1.2);
+}
+
+/*******************************round results page area:*****************************/
+
+
+#bodyResultContainer {
+    display: flex;
+}
+
+#bodyResultContainer>* {
+    flex: 1 1 0;
+}
+
+.currentRound, .lateralRoundTitleLeft, .lateralRoundTitleRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.lateralRoundTitleLeft, .h2Left {
+    margin-right: auto;
+}
+
+.lateralRoundTitleRight, .h2Right {
+    margin-left: auto;
+}
+
+/*.mainArea, .mainArea * {
+    border: 2px solid red;
+}
+*/
+
+.mainArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+}
+
+.computerArea, .userArea, .computerScore, .userScore {
+    display: flex;
+}
+
+.computerArea>*, .userArea>*, .computerScore>*, .userScore>* {
+    flex: 1 1 0;
+}
+
+.userArea {
+    margin-top: 50px;
+}
+
+.computerArea {
+    margin-bottom: 10px;
+}
+
+.resultDisplay {
+    text-align: center;
+}
+
+.resultTitle {
+    padding: 10px;
+}
+
+/*
+.roundsDisplay, .roundsDisplay * {
+    border: 2px solid red;
+}
+*/
+
+.roundsDisplay {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.roundsDisplay * {
+    margin: 0px;
+}
