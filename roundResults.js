@@ -36,6 +36,7 @@ function setResultPage(){
                     <div class="resultDisplay">
                         <div class="resultTitle"> 
                             <h1 class="resultTitleCaption"></h1>
+                            <span class="resultTitleCaptionEmoji"></span>
                         </div>
                         <div class="roundsDisplay">
                                 <h2>Round:</h2>
@@ -138,7 +139,9 @@ function setCase(resultCase){
 
     if(resultCase == 0) { //draw case
         let resultTitleCaption = document.querySelector('.resultTitleCaption');
-        resultTitleCaption.textContent = "It's a Draw! 😲";
+        resultTitleCaption.textContent = "It's a Draw!";
+        let resultTitleCaptionEmoji = document.querySelector('.resultTitleCaptionEmoji');
+        resultTitleCaptionEmoji.textContent = ' 😲';
         let computerScoreValue = document.querySelector('.computerScoreValue');
         computerScoreValue.textContent = computerPoints;
         let userScoreValue = document.querySelector('.userScoreValue');
@@ -146,7 +149,9 @@ function setCase(resultCase){
     
     } else if(resultCase == 1 || resultCase == 3 || resultCase == 6) { //lost case
         let resultTitleCaption = document.querySelector('.resultTitleCaption');
-        resultTitleCaption.textContent = "You lost this round! 😨";
+        resultTitleCaption.textContent = "You lost this round!";
+        let resultTitleCaptionEmoji = document.querySelector('.resultTitleCaptionEmoji');
+        resultTitleCaptionEmoji.textContent = ' 😨';
         computerPoints += 1;
         let computerScoreValue = document.querySelector('.computerScoreValue');
         computerScoreValue.textContent = computerPoints;
@@ -155,7 +160,9 @@ function setCase(resultCase){
     
     } else if(resultCase == 2 || resultCase == 4 || resultCase == 5) { //win case
         let resultTitleCaption = document.querySelector('.resultTitleCaption');
-        resultTitleCaption.textContent = "You win this round! 🤗";
+        resultTitleCaption.textContent = "You win this round!";
+        let resultTitleCaptionEmoji = document.querySelector('.resultTitleCaptionEmoji');
+        resultTitleCaptionEmoji.textContent = ' 🤗';
         userPoints += 1;
         let computerScoreValue = document.querySelector('.computerScoreValue');
         computerScoreValue.textContent = computerPoints;

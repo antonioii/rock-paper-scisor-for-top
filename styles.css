@@ -4,6 +4,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+.userChoiceFig,
+.computerChoiceFig,
+.h2Right,
+.h2Left,
+.resultTitleCaptionEmoji,
+.resultDisplayRound,
+.limitOfRounds {
+    font-family: 'Noto Color Emoji', sans-serif;
+}
+
+.resultTitleCaptionEmoji {
+    font-size: xx-large;
+}
 
 .rockPaperScissorTitle, .principalTitle>h1{
     font-family: 'Bungee Spice', cursive;
@@ -25,10 +40,11 @@
 }
 
 button {
-    font-family: 'Josefin Sans', sans-serif;
+    /*an alternative font-family: 'Josefin Sans', sans-serif;*/
     font-size: medium;
     font-weight: bold;
     text-align: center;
+    font-family: 'Noto Color Emoji', sans-serif;
 }
 
 /*universal box-sizing reset*/
