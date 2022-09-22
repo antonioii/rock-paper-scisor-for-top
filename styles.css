@@ -1,3 +1,12 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+.rockPaperScissorTitle {
+    font-family: 'Bungee Spice', cursive;
+    font-size: xx-large;
+    text-shadow: 3px 3px black;
+}
+
 /*universal box-sizing reset*/
 html {
     box-sizing: border-box;
